@@ -1,4 +1,5 @@
 import express from 'express';
+import morgan from 'morgan';
 import Promise from 'bluebird';
 
 global.Promise = Promise;
@@ -13,5 +14,6 @@ router.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
+app.use(morgan('dev'));
 app.use(router);
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
