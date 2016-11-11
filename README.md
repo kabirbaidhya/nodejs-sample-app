@@ -1,5 +1,7 @@
 # Sample Node JS App
 
+A ridiculously simple sample project done in NodeJS.
+
 ## What do you want?
 
 | branch  | type of the application  |
@@ -8,7 +10,7 @@
 | [starter](https://github.com/kabirbaidhya/nodejs-sample-app/tree/starter)  | A minimalistic starter template for your next NodeJS project  |
 | [rest-api](https://github.com/kabirbaidhya/nodejs-sample-app/tree/rest-api)  | A sample express application exposing REST API from a postgres database.  |
 
-Just run `git checkout <branch name>` and start the app.
+Just run `git checkout <branch>` and start the app.
 
 ## Setup
 
@@ -23,7 +25,7 @@ yarn
 
 ## Configuration
 
-Create a database in `postgres` & import the sample database schema.
+Create a `postgres` database & import the sample schema.
 ```
 $ createdb YOUR_DATABASE
 $ psql YOUR_DATABASE < resources/data/schema.sql
@@ -113,3 +115,4 @@ Did you see that? Awesome. Now try the `PUT` and `DELETE` APIs as well.
 
 ## Stay tuned
 We'll be building a frontend app to make use of this todo API shortly.
+
