@@ -18,5 +18,5 @@ app.use(requestLogger);
 logger.debug('Debug logs are enabled');
 logger.info('Application Environment: ' + app.get('env'));
 
-app.use(routes);
+app.use('/api', routes);
 app.listen(config.port, () => logger.info(`Listening on port ${config.port}`));

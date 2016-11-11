@@ -1,9 +1,10 @@
 import express from 'express';
-import { sayHello } from './controllers/hello';
+import * as todo from './controllers/todo';
 
 let router = express.Router();
 
 // Hello World
-router.get('/', sayHello);
+router.get('/todos', todo.getAll);
+router.get('/todos/:id', todo.getTodo);
 
 export default router;
