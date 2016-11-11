@@ -1,8 +1,8 @@
 
-import {fetchTodos, fetch, create, destroy} from '../services/todo';
+import {fetchAll, fetch, create, update, destroy} from '../services/todo';
 
 export function getAll(req, res) {
-    respond(req, res, fetchTodos());
+    respond(req, res, fetchAll());
 }
 
 export function getTodo(req, res) {
@@ -14,13 +14,20 @@ export function getTodo(req, res) {
 export function createTodo(req, res) {
     const payload = req.body;
 
-    respond(req, res, create());
+    respond(req, res, create(payload));
 }
 
 export function deleteTodo(req, res) {
     const todoId = req.params.id;
 
     respond(req, res, destroy(todoId));
+}
+
+export function updateTodo(req, res) {
+    const todoId = req.params.id;
+    const payload = req.body;
+
+    respond(req, res, update(todoId, payload));
 }
 
 function respond(req, res, result) {

@@ -2,16 +2,16 @@
 import Todo from '../models/Todo';
 import logger from '../foundation/logger';
 
-export function fetchTodos() {
+export function fetchAll() {
     logger.debug('Fetching all the todos');
 
     return Todo.fetchAll();
 }
 
 export function fetch(id) {
-    let found = Todo.where('id', id).fetch();
+    let item = Todo.where('id', id);
 
-    return found.then(data => {
+    return item.fetch().then(data => {
         logger.debug(`Got data for todo item ${id}`, data);
 
         return (data) ? data : Promise.reject({
@@ -24,7 +24,7 @@ export function fetch(id) {
 export function create(data) {
     let item = new Todo(data);
 
-    logger.debug('Creating a new item');
+    logger.debug('Creating a new item with data', data);
 
     return item.save().then(createdItem => {
         logger.debug('Item created', createdItem);
@@ -33,8 +33,14 @@ export function create(data) {
     });
 }
 
-export function destroy(id) {
+export function update(id, data) {
     return fetch(id).then(
-        item => item.destroy()
+        item => item.set(data).save()
     );
+}
+
+export function destroy(id) {
+    return fetch(id).then(item => {
+        item.destroy();
+    });
 }
