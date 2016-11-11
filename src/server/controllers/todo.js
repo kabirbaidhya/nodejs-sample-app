@@ -1,4 +1,5 @@
 
+import {respond} from '../foundation/responder';
 import {fetchAll, fetch, create, update, destroy} from '../services/todo';
 
 export function getAll(req, res) {
@@ -28,12 +29,4 @@ export function updateTodo(req, res) {
     const payload = req.body;
 
     respond(req, res, update(todoId, payload));
-}
-
-function respond(req, res, result) {
-    result
-        .then(data => res.json(data))
-        .catch(err => res.status(err.status || 500).json({
-            error: err
-        }));
 }
