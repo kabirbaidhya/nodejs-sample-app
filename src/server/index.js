@@ -1,21 +1,22 @@
 import express from 'express';
 import morgan from 'morgan';
 import Promise from 'bluebird';
+
 import routes from './routes';
-import requestLogger from './middlewares/requestLogger';
+import config from './config/config';
 import logger from './services/logger';
+import requestLogger from './middlewares/requestLogger';
 
 global.Promise = Promise;
 
 let app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(requestLogger);
 // Or use morgan instead for logging
 // app.use(morgan('dev'));
 
-logger.debug('This is just a test log for debugging');
+logger.debug('Debug logs are enabled');
 logger.info('Application Environment: ' + app.get('env'));
 
 app.use(routes);
-app.listen(PORT, () => logger.info(`Listening on port ${PORT}`));
+app.listen(config.port, () => logger.info(`Listening on port ${config.port}`));

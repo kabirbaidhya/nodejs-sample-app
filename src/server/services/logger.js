@@ -1,4 +1,5 @@
 import winston from 'winston';
+import config from '../config/config';
 
 const logger = new (winston.Logger)({
     transports: [
@@ -6,6 +7,6 @@ const logger = new (winston.Logger)({
     ]
 });
 
-logger.level = process.env.LOGGING_LEVEL || 'info';
+logger.level = config.logging.level;
 
 export default logger;
