@@ -12,6 +12,20 @@ $ npm install
 $ yarn
 ```
 
+## Configuration
+
+Create a database in `postgres` & import the sample database schema.
+```
+$ createdb YOUR_DATABASE
+$ psql YOUR_DATABASE < resources/data/schema.sql
+```
+
+Create a `.env` file with your configuration.
+
+```
+$ cp .env.example .env
+```
+
 Then start the app
 ```
 $ npm start
