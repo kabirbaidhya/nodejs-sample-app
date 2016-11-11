@@ -4,7 +4,7 @@ import Promise from 'bluebird';
 
 import routes from './routes';
 import config from './config/config';
-import logger from './services/logger';
+import logger from './foundation/logger';
 import requestLogger from './middlewares/requestLogger';
 
 global.Promise = Promise;
