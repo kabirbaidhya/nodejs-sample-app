@@ -15,7 +15,7 @@ app.use(requestLogger);
 // app.use(morgan('dev'));
 
 logger.debug('This is just a test log for debugging');
-logger.info('Application Environment: ' + process.env.NODE_ENV);
+logger.info('Application Environment: ' + app.get('env'));
 
 app.use(routes);
 app.listen(PORT, () => logger.info(`Listening on port ${PORT}`));
