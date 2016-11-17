@@ -5,11 +5,11 @@ import logger from '../foundation/logger';
 export function fetchAll() {
     logger.debug('Fetching all the todos');
 
-    return Todo.fetchAll().then(result => result.map(camelizeData));
+    return Todo.fetchAll();
 }
 
 export function fetch(id) {
-    return fetchModel(id).then(camelizeData);
+    return fetchModel(id);
 }
 
 export function create(data) {
@@ -33,6 +33,8 @@ export function update(id, data) {
 export function destroy(id) {
     return fetchModel(id).then(item => {
         item.destroy();
+
+        return null;
     });
 }
 
@@ -49,6 +51,7 @@ function fetchModel(id) {
     });
 }
 
-function camelizeData(data) {
-    return camelize(data.attributes);
-}
+// NOTE: Can use this to convert snake_case to camelCase in the API responses
+// function camelizeData(data) {
+//     return camelize(data.attributes);
+// }
