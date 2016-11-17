@@ -15,7 +15,7 @@ ALTER TABLE todo ADD CONSTRAINT todo_pkey PRIMARY KEY (id);
 
 --
 -- Dummy Data
-INSERT INTO todo(id, title, completed) VALUES (1, 'Learn Javascript Basics', true);
-INSERT INTO todo(id, title, completed) VALUES (2, 'Learn Angular', true);
-INSERT INTO todo(id, title, completed) VALUES (3, 'Learn Webpack', false);
-INSERT INTO todo(id, title, completed) VALUES (4, 'Learn ES6+ features', false);
+INSERT INTO todo(title, completed) VALUES ('Learn Javascript Basics', true);
+INSERT INTO todo(title, completed) VALUES ('Learn Angular', true);
+INSERT INTO todo(title, completed) VALUES ('Learn Webpack', false);
+INSERT INTO todo(title, completed) VALUES ('Learn ES6+ features', false);
