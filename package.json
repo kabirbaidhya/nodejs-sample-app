@@ -9,7 +9,7 @@
     "start:dev": "nodemon --exec babel-node src/server/index.js",
     "lint": "eslint .",
     "clean": "rimraf dist/",
-    "build": "run-s clean babel",
+    "build": "run-s lint clean babel",
     "babel": "babel src/ -d dist/",
     "list:routes": "babel-node ./resources/scripts/list-routes.js"
   },
