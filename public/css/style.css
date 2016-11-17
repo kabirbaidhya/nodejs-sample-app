@@ -1,0 +1,25 @@
+.todo-app {
+    min-height: 100px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.todo-list .todo.completed .title {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.todo-list .todo .delete {
+    display: none;
+    cursor: pointer;
+}
+
+.todo-list .todo:hover .delete {
+    display: inline-block;
+}

@@ -1,0 +1,15 @@
+<div class="todo" ng-class="{'completed': vm.data.completed, 'pending': !vm.data.completed}">
+    <div ng-if="!vm.editing">
+        <input type="checkbox" ng-model="vm.data.completed" ng-disabled="vm.saving" />
+        <span ng-click="vm.beginEdit()" class="title">{{vm.data.title}}</span>
+        <a href class="delete" ng-click="vm.delete()">Delete</a>
+    </div>
+    <div ng-if="vm.editing">
+        <textbox
+            text="vm.data.title"
+            on-submit="vm.saveChanges"
+            on-escape="vm.stopEdit"
+            disabled="vm.saving" >
+        </textbox>
+    </div>
+</div>

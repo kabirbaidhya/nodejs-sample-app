@@ -1,0 +1,6 @@
+<p ng-if="!vm.hasItems()" class="message">No TODO Items</p>
+<ul ng-if="vm.hasItems()" class="todo-list">
+    <li ng-repeat="item in vm.items">
+        <todo-item data="item" on-delete="vm.handleDelete"></todo-item>
+    </li>
+</ul>
