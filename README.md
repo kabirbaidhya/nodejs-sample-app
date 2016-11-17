@@ -25,10 +25,10 @@ yarn
 
 ## Configuration
 
-Create a `postgres` database & import the sample schema.
+Create a `postgres` database & import the sample todoapp database schema.
 ```
 $ createdb YOUR_DATABASE
-$ psql YOUR_DATABASE < resources/data/schema.sql
+$ psql YOUR_DATABASE < resources/data/todoapp.sql
 ```
 
 Create a `.env` file with your configuration.
