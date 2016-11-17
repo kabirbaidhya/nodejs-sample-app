@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import morgan from 'morgan';
 import Promise from 'bluebird';
@@ -11,6 +12,7 @@ global.Promise = Promise;
 
 let app = express();
 
+app.use(cors());
 app.use(requestLogger);
 // Or use morgan instead for logging
 // app.use(morgan('dev'));
