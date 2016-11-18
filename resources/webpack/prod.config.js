@@ -6,7 +6,7 @@ module.exports = {
     module: common.module,
     output: {
         path: common.output.path,
-        filename: '[name].min.js'
+        filename: '[name].js'
     },
     plugins: common.plugins.concat([
         new webpack.optimize.UglifyJsPlugin({

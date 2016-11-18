@@ -8,14 +8,13 @@
     "start": "run-s lint start:dev",
     "lint": "eslint .",
     "clean": "rimraf dist/ public/build",
-    "build": "run-s lint clean build:b build:f:*",
+    "build": "run-s lint clean build:all",
+    "build:all": "./resources/scripts/build.sh",
+    "build:prod": "NODE_ENV=production npm run build",
     "list:routes": "babel-node ./resources/scripts/list-routes.js",
     "start:dev": "run-p start:b start:f",
     "start:b": "nodemon --exec babel-node src/server/index.js",
-    "build:b": "babel src/ -d dist/",
-    "start:f": "webpack-dev-server --config resources/webpack/dev.config.js --colors",
-    "build:f:dev": "webpack --config resources/webpack/dev.config.js",
-    "build:f:prod": "NODE_ENV=production webpack --config resources/webpack/prod.config.js -p"
+    "start:f": "webpack-dev-server --config resources/webpack/dev.config.js --colors"
   },
   "dependencies": {
     "angular": "^1.5.8",
