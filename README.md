@@ -9,6 +9,7 @@ A ridiculously simple sample project done in NodeJS.
 | [hello-world](https://github.com/kabirbaidhya/nodejs-sample-app/tree/hello-world)  | A Hello world application  |
 | [starter](https://github.com/kabirbaidhya/nodejs-sample-app/tree/starter)  | A minimalistic starter template for your next NodeJS project  |
 | [rest-api](https://github.com/kabirbaidhya/nodejs-sample-app/tree/rest-api)  | A sample express application exposing REST API from a postgres database.  |
+| [todoapp](https://github.com/kabirbaidhya/nodejs-sample-app/tree/todoapp)  | A full todoapp sample with angular on the frontend and the express API on the backend.  |
 
 Just run `git checkout <branch>` and start the app.
 
