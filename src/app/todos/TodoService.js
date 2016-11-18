@@ -1,7 +1,7 @@
 TodoService.$inject = ['$resource', '$timeout'];
 
 export default function TodoService($resource, $timeout) {
-    let todo = $resource(process.env.API_BASE_URI + '/api/todos/:id', null, {
+    let todo = $resource(process.env.API_BASE_URI + '/todos/:id', null, {
         'query': {method: 'GET', isArray: true},
         'get': {method: 'GET'},
         'save': {method: 'POST'},
