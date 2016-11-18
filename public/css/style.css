@@ -23,3 +23,23 @@
 .todo-list .todo:hover .delete {
     display: inline-block;
 }
+
+/* Angular UI Block */
+.ui-block-wrapper .ui-block-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.ui-block-wrapper .ui-block-spinner {
+    top: calc(50% - 40px);
+    left: 0;
+    right: 0;
+    z-index: 21;
+    position: absolute;
+    text-align: center;
+}
