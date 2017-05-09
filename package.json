@@ -12,11 +12,11 @@
     "build": "run-s lint clean babel",
     "babel": "babel src/ -d dist/",
     "list:routes": "babel-node ./resources/scripts/list-routes.js",
+    "migrate": "knex migrate:latest",
     "migrate:make": "knex migrate:make",
-    "migrate:latest": "knex migrate:latest",
     "migrate:rollback": "knex migrate:rollback",
-    "seed:make": "knex seed:make",
-    "seed:run": "knex seed:run"
+    "seed": "knex seed:run",
+    "seed:make": "knex seed:make"
   },
   "dependencies": {
     "bluebird": "^3.4.6",
