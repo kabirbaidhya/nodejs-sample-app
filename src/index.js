@@ -1,6 +1,8 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import Promise from 'bluebird';
 
+dotenv.config();
 global.Promise = Promise;
 
 let app = express();
