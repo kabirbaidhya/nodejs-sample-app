@@ -11,7 +11,10 @@
     "clean": "rimraf dist/",
     "build": "run-s lint clean babel",
     "babel": "babel src/ -d dist/",
-    "list:routes": "babel-node ./resources/scripts/list-routes.js"
+    "list:routes": "babel-node ./resources/scripts/list-routes.js",
+    "migrate:make": "knex migrate:make",
+    "migrate:latest": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback"
   },
   "dependencies": {
     "bluebird": "^3.4.6",
