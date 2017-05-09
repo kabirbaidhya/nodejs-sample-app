@@ -15,10 +15,11 @@
   },
   "dependencies": {
     "bluebird": "^3.4.6",
+    "dotenv": "^4.0.0",
     "express": "^4.14.0",
+    "knex": "^0.13.0",
     "morgan": "^1.7.0",
-    "winston": "^2.3.0",
-    "dotenv": "^4.0.0"
+    "winston": "^2.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
