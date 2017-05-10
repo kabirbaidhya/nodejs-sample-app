@@ -11,7 +11,12 @@
     "clean": "rimraf dist/",
     "build": "run-s lint clean babel",
     "babel": "babel src/ -d dist/",
-    "list:routes": "babel-node ./resources/scripts/list-routes.js"
+    "list:routes": "babel-node ./resources/scripts/list-routes.js",
+    "migrate": "knex migrate:latest",
+    "migrate:make": "knex migrate:make",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "seed:make": "knex seed:make"
   },
   "dependencies": {
     "bluebird": "^3.4.6",
@@ -20,11 +25,11 @@
     "camelize": "^1.0.0",
     "cors": "^2.8.1",
     "express": "^4.14.0",
-    "knex": "^0.12.6",
-    "morgan": "^1.7.0",
-    "pg": "^6.1.0",
     "winston": "^2.3.0",
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "knex": "^0.13.0",
+    "morgan": "^1.7.0",
+    "pg": "^6.1.5"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
