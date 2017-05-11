@@ -29,7 +29,6 @@ yarn
 Create a `postgres` database & import the sample todoapp database schema.
 ```
 $ createdb YOUR_DATABASE
-$ psql YOUR_DATABASE < resources/data/todoapp.sql
 ```
 
 Create a `.env` file with your configuration.
@@ -41,6 +40,24 @@ $ cp .env.example .env
 Then start the app
 ```
 $ npm start
+```
+
+To run the database migration, run the following command
+```
+# Using npm
+$ npm run migrate
+
+# Using yarn
+$ yarn migrate
+```
+
+To run the database seed, run the following command
+```
+# Using npm
+$ npm run seed
+
+# Using yarn
+$ yarn seed
 ```
 
 If you have `node-foreman` installed globally you can do
